@@ -1,0 +1,110 @@
+@charset "utf-8";
+/* 속성 선언 순서 */
+/* display, overflow, float, position, width&height, margin&padding, border, background, font, anmation, ETC... */
+
+/* common */
+body{ max-width:1920px; margin:0 auto; }
+.box{ width:80%; }
+.tab_visual a, .snb, .visual_dsc p{ font-weight:700; }
+.cont_tit,.cont_tit p{ font-family: 'Playfair Display', serif; font-size:48px; font-weight:700; letter-spacing:5px; line-height:1.2; color:#000; }
+.sub_tit{ font-weight:700; color:#000; }
+.sub_txt p,.technique_txt{ line-height:1.5; }
+
+/* wrap */
+#wrap{ position:relative; width:100%; }
+
+/* header */
+#header{ width:100%; padding:50px 0; }
+#header .logo{ display:inline-block; padding-left:50px; }
+.img_logo1{ width:50px; }
+.gnb{ float:right; padding-right:20%; }
+.gnb a{ display:inline-block; padding-left:80px; vertical-align:middle; }
+.tab_gnb{ margin:0 10px; }
+.tab_gnb:hover{ font-weight:700; }
+
+/* container */
+#containter{ width:100%; }
+
+/* visual content */
+.visual{ clear:both; width:100%; height:35vw; }
+.snb{ float:left; width:15%; height:100%; }
+.snb_menu01,.snb_menu02{ padding-top:30px; padding-left:20%; }
+.snb a{ display:block; padding:10px 0; transition:color 0.5s; }
+.snb a:hover{ color:#ddd; }
+.visual_banner{ float:right; position:relative; width:85%; height:100%; }
+.banner_bg{ position:relative; height:70%; background:url("../img/img_visual1.jpg") center no-repeat; background-size:cover; overflow:hidden; }
+.visual_tit{ position:absolute; left:80px; bottom:0; color:#fff; font-size:120px; line-height:0.8; }
+.visual_dsc{ clear:both; overflow:hidden; margin-right:20vw; padding: 50px 80px; }
+.visual_dsc p:first-child{ float:left; }
+.visual_dsc p:last-child{ float:right; }
+.visual_side{ position:absolute; top:0; right:0; width:20vw; height:100%; border-left:1px solid #fff; background-color:rgba(7, 21, 54, 0); transition:background 0.5s; }
+.visual_banner:hover .visual_side{ background-color:rgba(7, 21, 54, 0.5); }
+.tab_visual{ transform:rotate(90deg) translate(50px, -50px); transform-origin:0 0; }
+.tab_visual a{ padding:0 10px; transition:color 0.5s; color:#777; }
+.tab_visual a:hover{ color:#fff; }
+.tab_visual a.tab_on{ color:#fff; }
+
+/* advance content */
+.advance{ width:100%; padding-bottom:50px; }
+.advance_banner{ position:relative; width:100%; height:35vw; background:url("../img/img_visual2.jpg") center no-repeat; background-size:cover; }
+.banner_square01{ width:15vw; height:100%; background-color:rgba(7, 21, 54, 0.5); }
+.banner_square02{ position:absolute; right:0; bottom:0; width:30vw; height:50%; background-color:#fff; }
+.advance_dsc{ position:relative; margin-left:15vw; padding:50px 80px; }
+.advance_tit{ position:absolute; top:-30px; }
+.txt01,.txt02{ clear:both; overflow:hidden; padding-top:80px; }
+.advance .sub_tit{ float:left; width:40%; }
+.advance .sub_txt{ float:left; width:60%; }
+.sub_txt p{ padding-bottom:20px; }
+
+/* technique content */
+.technique{ position:relative; width:100%; }
+.technique .cont{ margin-left:15vw; padding:50px 200px 50px 0; overflow: hidden; }
+.img_tech{ width:100%; }
+.technique_dsc{ clear:both; position:relative; }
+.technique_tit{ position:absolute; top:-30px; left:50px; }
+.technique_tit:after{ display:inline-block; position:absolute; bottom:0; left:0; content:""; width:100%; height:3px; background-color:#000; opacity:0; transition:opacity 0.5s; }
+.technique .cont:hover .technique_tit:after{ opacity:1; }
+.technique .cont:hover .img_tech{ opacity:1; }
+.img_tech{ opacity:0.5; transition:opacity 0.5s; }
+.technique_txt{ float:right; width:40%; padding:30px 0; }
+
+/* footer */
+#footer{ clear:both; width:80%; padding: 80px 10vw 80px 15vw; background:rgb(14, 22, 39); }
+#footer .logo,.information,.sns{ display:inline-block; }
+#footer .logo{ padding-right:100px; vertical-align:top; }
+.information{ width:70%; }
+.cont01{ padding-bottom:50px; }
+.cont01,.terms{ clear:both; overflow:hidden; }
+.adrress,.contact,.terms .info_tit{ float:left; width:50%; }
+.adrress .info_tit, .contact .info_tit{ padding-bottom:20px; }
+.info_tit{ color:#fff; }
+.info_txt{ color:#777; }
+.terms a:hover{ color:#ddd; }
+.sns{ float:right; vertical-align: top; }
+.sns a{ display:block; padding:10px; }
+
+/* aside */
+.side_banner{ position:absolute; right:0; bottom:0; width:20vw; height:66vw; background:url("../img/img_bg.jpg") center no-repeat; background-size:cover; }
+.side_tit{ position:absolute; right:-48%; bottom:50%; font-family: 'Playfair Display', serif; font-size:120px; font-weight:700; color:#555; transform:rotate(90deg); opacity:0.5; z-index:100; }
+.side_txt{ position:absolute; left:-20%; bottom:13%; transform:rotate(90deg); color:#555; }
+
+/* media query */
+@media (min-width:1024px) and (max-width:1919px){
+html,body{ font-size: 10px; }
+/* visual content */
+.snb_menu01,.snb_menu02{ padding-top:10px; padding-left:15%; }
+.snb_menu01 a,.snb_menu02 a{ padding:5px 0; }
+.visual_tit{ font-size:70px; }
+.tab_visual{ transform:rotate(90deg) translate(30px, -30px); }
+/* advance content */
+.advance .sub_tit{ width:50%; }
+.advance .sub_txt{ width:50%; }
+/* technique content */
+.technique .cont{ padding:20px 130px 20px 0; }
+/* footer */
+#footer{ padding: 50px 10vw 50px 15vw; }
+#footer .logo{ padding-right:50px; }
+/* aside */
+.side_banner{ height:80vw; }
+.side_tit{ left:0; }
+}
